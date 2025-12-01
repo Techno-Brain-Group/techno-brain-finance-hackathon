@@ -29,7 +29,6 @@ body:
         - label: Java
           required: false  
         - label: JavaScript/TypeScript
-          required: false 
           required: false
         - label: Other
           required: false 
