@@ -1,0 +1,70 @@
+name: Project Submission
+description: "Submit your AI-Driven Smart Finance Hackathon project to win prizes!"
+title: "Project: <Title>, <Category>"
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project Name
+      description: Name of your project
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a description of your  application. Treat this as your project README.
+    validations:
+      required: true
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Language & Framework
+      description: Check any languages or frameworks used for your  application.
+      options:
+        - label: Python
+          required: false
+        - label: C#
+          required: false 
+        - label: Java
+          required: false  
+        - label: JavaScript/TypeScript
+          required: false
+        - label: Other
+          required: false 
+  - type: input
+    id: url_repo
+    attributes:
+      label: Project Repository URL
+      description: URL of the GitHub repo with your project, which should include a clear README
+    validations:
+      required: true
+  - type: input
+    id: url_endpoint
+    attributes:
+      label: Deployed Endpoint URL
+      description: URL of a deployed endpoint (if it can be publicly shared, not for private data)
+    validations:
+      required: false
+  - type: input
+    id: video
+    attributes:
+      label: Project Video
+      description: A short demo video of your project (must be LESS than 5 minutes)
+    validations:
+      required: true
+  - type: input
+    id: teammembers
+    attributes:
+      label: Team Members
+      description: Comma-separated list of GitHub users who worked on this project
+    validations:
+      required: true
+  - type: checkboxes
+    id: register
+    attributes:
+      label: Registration Check
+      description: Confirm that you have filled out the Registration Form, we will not be able to confirm prizes if you don't! 
+      options:
+        - label: Has filled out the registration form
+          required: true
