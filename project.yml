@@ -1,0 +1,171 @@
+name: Project Submission
+description: "Submit your AI-Driven Smart Finance Hackathon project to win prizes!"
+title: "Project: <Title>, <Category>"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 AI-Driven Smart Finance Hackathon 2025
+        **Techno Brain - From Transaction to Trust**
+        
+        Please fill out all required fields to submit your project. Make sure all team members have [registered](http://bit.ly/47QrKAo) before submitting!
+
+  - type: input
+    id: name
+    attributes:
+      label: Project Name
+      description: A short, memorable name for your project
+      placeholder: e.g., FraudShield AI
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a detailed description of your solution. Treat this as your project README - explain the problem, your approach, and the impact.
+      placeholder: |
+        ### Problem Statement
+        Describe the problem your solution addresses...
+        
+        ### Solution
+        Explain how your solution works...
+        
+        ### Tech Stack
+        List the technologies used...
+        
+        ### Impact
+        Describe the potential impact of your solution...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: category
+    attributes:
+      label: Challenge Category
+      description: Select the category that best fits your project (choose one primary category)
+      options:
+        - label: "🛡️ Threat Detection"
+          required: false
+        - label: "🔐 Cyber Intelligence"
+          required: false
+        - label: "🕵️ Organized Crime"
+          required: false
+        - label: "🤖 Generative & Agentic AI"
+          required: false
+        - label: "⚖️ Governance & Public Policy"
+          required: false
+        - label: "📊 Predictive Analytics"
+          required: false
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: technologies
+    attributes:
+      label: Technologies Used
+      description: Check all technologies and frameworks used in your project
+      options:
+        - label: Python
+          required: false
+        - label: JavaScript/TypeScript
+          required: false
+        - label: Java
+          required: false
+        - label: C#/.NET
+          required: false
+        - label: Machine Learning / Deep Learning
+          required: false
+        - label: Large Language Models (LLMs)
+          required: false
+        - label: Computer Vision
+          required: false
+        - label: Azure AI Services
+          required: false
+        - label: AWS AI/ML Services
+          required: false
+        - label: Google Cloud AI
+          required: false
+        - label: Other (specify in description)
+          required: false
+
+  - type: input
+    id: url_repo
+    attributes:
+      label: Project Repository URL
+      description: URL of your public GitHub repository (must include a clear README)
+      placeholder: https://github.com/username/project-name
+    validations:
+      required: true
+
+  - type: input
+    id: url_endpoint
+    attributes:
+      label: Deployed Endpoint URL
+      description: URL of a live demo or deployed endpoint (if publicly accessible)
+      placeholder: https://your-app.herokuapp.com
+    validations:
+      required: false
+
+  - type: input
+    id: video
+    attributes:
+      label: Project Video URL
+      description: A short demo video of your project (must be LESS than 5 minutes). Upload to YouTube, Loom, or similar.
+      placeholder: https://www.youtube.com/watch?v=xxxxx
+    validations:
+      required: true
+
+  - type: textarea
+    id: team_members
+    attributes:
+      label: Team Members
+      description: List all team members with their GitHub usernames and roles
+      placeholder: |
+        - @username1 - Team Lead, Backend Developer
+        - @username2 - ML Engineer
+        - @username3 - Frontend Developer
+        - @username4 - Designer
+    validations:
+      required: true
+
+  - type: input
+    id: team_lead_email
+    attributes:
+      label: Team Lead Email
+      description: Email address for the team lead (for prize coordination)
+      placeholder: teamlead@example.com
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: registration_check
+    attributes:
+      label: Registration Confirmation
+      description: Confirm that all team members have individually filled out the [registration form](http://bit.ly/47QrKAo). We cannot award prizes if team members aren't registered!
+      options:
+        - label: Each of my team members has individually completed the registration form
+          required: true
+
+  - type: checkboxes
+    id: rules_check
+    attributes:
+      label: Rules Acknowledgment
+      description: Confirm that you have read and agree to the hackathon rules
+      options:
+        - label: I have read and agree to the [Official Rules](../rules/)
+          required: true
+        - label: This is original work created for this hackathon
+          required: true
+        - label: My video is under 5 minutes and demonstrates the solution
+          required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any other information you'd like to share about your project (optional)
+      placeholder: Special considerations, future plans, challenges faced, etc.
+    validations:
+      required: false

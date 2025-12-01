@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Rules | AI-Driven Smart Finance Hackathon 2025</title>
+    <meta name="description" content="Official rules for Techno Brain's AI-Driven Smart Finance Hackathon 2025.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        :root {
+            --tb-blue-dark: #0a1628;
+            --tb-blue-primary: #0f2744;
+            --tb-blue-secondary: #1a3a5c;
+            --tb-orange: #f7931e;
+            --tb-orange-light: #ffa940;
+            --tb-orange-dark: #e07800;
+            --text-white: #ffffff;
+            --text-light: #e8eef4;
+            --text-muted: #8fa3b8;
+            --bg-dark: #060d16;
+            --bg-card: rgba(15, 39, 68, 0.6);
+            --border-subtle: rgba(247, 147, 30, 0.2);
+            --border-accent: rgba(247, 147, 30, 0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 0%, rgba(247, 147, 30, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(26, 58, 92, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(6, 13, 22, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.875rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        .logo-mark {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
+        }
+
+        .logo-mark .material-symbols-outlined {
+            font-size: 24px;
+            color: var(--tb-blue-dark);
+            font-variation-settings: 'FILL' 1, 'wght' 600;
+        }
+
+        .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-name { font-weight: 700; font-size: 1.1rem; }
+        .logo-tagline { font-size: 0.7rem; color: var(--tb-orange); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--tb-orange); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            color: var(--tb-blue-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-header {
+            position: relative;
+            z-index: 1;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+
+        .breadcrumb a { color: var(--tb-orange); text-decoration: none; display: flex; align-items: center; gap: 0.25rem; }
+        .breadcrumb span { color: var(--text-muted); }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .page-header h1 .material-symbols-outlined {
+            font-size: 36px;
+            color: var(--tb-orange);
+        }
+
+        .page-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .rules-section { margin-bottom: 2.5rem; }
+
+        .rules-section h2 {
+            font-size: 1.35rem;
+            color: var(--tb-orange);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.625rem;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+        }
+
+        .rules-section h2 .material-symbols-outlined { font-size: 22px; }
+
+        .rules-section h3 { font-size: 1.1rem; margin: 1.25rem 0 0.625rem; font-weight: 600; }
+        .rules-section p { color: var(--text-muted); margin-bottom: 0.875rem; }
+        .rules-section ul, .rules-section ol { color: var(--text-muted); margin: 0.875rem 0 0.875rem 1.5rem; }
+        .rules-section li { margin-bottom: 0.5rem; }
+
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--tb-orange);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .highlight-box h4 .material-symbols-outlined { font-size: 20px; }
+
+        .key-dates { display: grid; gap: 0.875rem; margin: 1.25rem 0; }
+
+        .date-item {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+        }
+
+        .date-item .material-symbols-outlined { font-size: 22px; color: var(--tb-orange); }
+        .date-item strong { min-width: 140px; color: var(--tb-orange); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            background: rgba(6, 13, 22, 0.95);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a { color: var(--tb-orange); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .page-header h1 { font-size: 1.75rem; }
+            .date-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">
+                <div class="logo-mark">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Techno Brain</span>
+                    <span class="logo-tagline">Empowering Lives</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#categories">Categories</a></li>
+                <li><a href="../#timeline">Timeline</a></li>
+                <li><a href="./" class="active">Rules</a></li>
+                <li><a href="../submission/">Submission</a></li>
+            </ul>
+            <a href="http://bit.ly/47QrKAo" target="_blank" class="nav-cta">
+                <span class="material-symbols-outlined">how_to_reg</span>
+                Register
+            </a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="breadcrumb">
+            <a href="../"><span class="material-symbols-outlined" style="font-size: 18px;">home</span> Home</a>
+            <span>/</span>
+            <span>Official Rules</span>
+        </div>
+        <h1><span class="material-symbols-outlined">gavel</span> Official Rules</h1>
+        <p>Official rules for the AI-Driven Smart Finance Hackathon 2025</p>
+    </header>
+
+    <main>
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">apartment</span> 1. Organizer</h2>
+            <p>These Official Rules ("Rules") govern the operation of the AI-Driven Smart Finance Hackathon ("Contest" or "Hackathon"). Techno Brain Group is the Contest organizer ("Organizer").</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">description</span> 2. Definitions</h2>
+            <p>In these Rules, "Techno Brain," "we," "our," and "us" refer to the Organizer and "you" and "yourself" refers to a Contest participant. "Team" refers to a group of up to four (4) Contest participants working together to produce a single entry.</p>
+            <p>By entering, you agree to be bound by these Rules.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">calendar_month</span> 3. Entry Period</h2>
+            <div class="key-dates">
+                <div class="date-item">
+                    <span class="material-symbols-outlined">how_to_reg</span>
+                    <strong>Registration:</strong>
+                    <span>Now open until December 1, 2025</span>
+                </div>
+                <div class="date-item">
+                    <span class="material-symbols-outlined">upload_file</span>
+                    <strong>Submission:</strong>
+                    <span>December 2, 2025 – December 8, 2025 (11:59 PM EAT)</span>
+                </div>
+                <div class="date-item">
+                    <span class="material-symbols-outlined">celebration</span>
+                    <strong>Hackathon Day:</strong>
+                    <span>December 13, 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">verified_user</span> 4. Eligibility</h2>
+            <p>To enter, you must be eighteen (18) years of age or older.</p>
+            
+            <div class="highlight-box">
+                <h4><span class="material-symbols-outlined">groups</span> Team Requirements</h4>
+                <ul>
+                    <li><strong>Teams:</strong> Each Team must be comprised of no more than four (4) Team Members.</li>
+                    <li><strong>Team Members:</strong> Each member must be 18 years of age or older. Each Team Member may only be a member of one (1) Team.</li>
+                    <li><strong>Team Leaders:</strong> Each Team must designate one Team Leader who is responsible for project submission and communications with organizers.</li>
+                    <li><strong>Submissions:</strong> Only one (1) Entry per Team may be submitted.</li>
+                </ul>
+            </div>
+
+            <p>Employees and directors of Techno Brain and its subsidiaries, affiliates, and persons involved in the execution or administration of this promotion are not eligible.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">login</span> 5. How to Enter</h2>
+            <p><strong>No Purchase Necessary.</strong></p>
+            <p>To enter, visit our registration page to register your team. During the submission period (December 2-8), submit your project via GitHub Issues following the <a href="../submission/" style="color: var(--tb-orange);">submission guidelines</a>.</p>
+            
+            <ul>
+                <li>There is an overall limit of 1 entry per team</li>
+                <li>You can only be a member of one team</li>
+                <li>Only one person from a team needs to submit the project, with all team member names included</li>
+                <li>Use of any automated system to participate is prohibited</li>
+            </ul>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">checklist</span> 6. Eligible Entry Requirements</h2>
+            <p>To be eligible, an entry must meet the following requirements:</p>
+            
+            <div class="highlight-box">
+                <h4><span class="material-symbols-outlined">task_alt</span> Your submission must include:</h4>
+                <ul>
+                    <li>Your entry must be your own original work</li>
+                    <li>The video portion must be solely your own work (filming, editing, etc.)</li>
+                    <li>Your entry cannot have been selected as a winner in any other contest</li>
+                    <li>You must have obtained all consents, approvals, or licenses required</li>
+                </ul>
+            </div>
+
+            <h3>Video Requirements</h3>
+            <p>The video portion of your entry must be no more than five (5) minutes in length and include:</p>
+            <ul>
+                <li>A demonstration of your solution</li>
+                <li>A description of your experience building your entry</li>
+                <li>An explanation of why you chose to create this solution</li>
+                <li>An answer to: "How did AI help you build this solution?"</li>
+            </ul>
+
+            <h3>Content Restrictions</h3>
+            <p>Your entry may NOT contain any content that is obscene, offensive, violent, defamatory, illegal, or that promotes illegal activities or communicates messages that may reflect negatively on the goodwill of Techno Brain.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">rate_review</span> 7. Judging Criteria</h2>
+            <p>Projects will be evaluated by a panel of judges based on the following criteria:</p>
+            
+            <div class="highlight-box">
+                <h4><span class="material-symbols-outlined">scoreboard</span> Scoring Breakdown</h4>
+                <ul>
+                    <li><strong>20% Innovation:</strong> Is the project premise interesting and original? Is the implementation creative?</li>
+                    <li><strong>20% Impact:</strong> Would this use case be valuable? Could it be utilized by organizations?</li>
+                    <li><strong>20% Usability:</strong> Does it solve a real-world problem? Does it follow Responsible AI principles?</li>
+                    <li><strong>20% Solution Quality:</strong> Is the repository complete with clear documentation? Is the implementation substantial?</li>
+                    <li><strong>20% Category Alignment:</strong> How well does the project fit its chosen category?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">emoji_events</span> 8. Prizes</h2>
+            <p>Prizes will be announced soon. Stay tuned for exciting rewards for winning teams!</p>
+            <p>Each team can only win in one category. All participants who submit a valid project will receive a certificate of participation.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">copyright</span> 9. Use of Your Entry</h2>
+            <p>By submitting an entry, you grant us an irrevocable, royalty-free, worldwide right and license to use, review, assess, test and otherwise analyze your entry and all its content in connection with this Contest.</p>
+            <p>Your entry may be posted on public websites and used for promotional purposes. You will not receive any compensation or credit for use of your entry beyond what is described in these Official Rules.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">shield</span> 10. General Conditions</h2>
+            <p>To the extent allowed by law, by entering you agree to release and hold harmless Techno Brain and its respective partners, subsidiaries, affiliates, employees, and agents from any and all liability or any injury, loss, or damage of any kind arising in connection with this Contest or any prize won.</p>
+            <p>All local laws apply. The decisions of Techno Brain are final and binding.</p>
+            <p>We reserve the right to cancel, change, or suspend this Contest for any reason, including cheating, technology failure, or any other unforeseen event that affects the integrity of this Contest.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">lock</span> 11. Privacy</h2>
+            <p>Personal data you provide while entering this Contest will be used by Techno Brain only for the administration and operation of this Contest and in accordance with our Privacy Policy.</p>
+        </section>
+
+        <section class="rules-section">
+            <h2><span class="material-symbols-outlined">mail</span> 12. Contact</h2>
+            <p>For questions about these rules or the hackathon, please contact us at: <a href="mailto:hackathon@technobrain.com" style="color: var(--tb-orange);">hackathon@technobrain.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Techno Brain Group. <a href="../">Back to Hackathon Home</a></p>
+    </footer>
+</body>
+</html>

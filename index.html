@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Smart Finance Hackathon 2025 | Techno Brain</title>
+    <meta name="description" content="Join Techno Brain's AI-Driven Smart Finance Hackathon on December 13th, 2025 in Nairobi, Kenya. From Transaction to Trust.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        :root {
+            --tb-blue-dark: #0a1628;
+            --tb-blue-primary: #0f2744;
+            --tb-blue-secondary: #1a3a5c;
+            --tb-blue-light: #2d5a87;
+            --tb-orange: #f7931e;
+            --tb-orange-light: #ffa940;
+            --tb-orange-dark: #e07800;
+            --text-white: #ffffff;
+            --text-light: #e8eef4;
+            --text-muted: #8fa3b8;
+            --bg-dark: #060d16;
+            --bg-card: rgba(15, 39, 68, 0.6);
+            --border-subtle: rgba(247, 147, 30, 0.2);
+            --border-accent: rgba(247, 147, 30, 0.4);
+            --gradient-hero: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #0f2744 100%);
+            --shadow-glow: 0 0 60px rgba(247, 147, 30, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        /* Background Effects */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 0%, rgba(247, 147, 30, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(26, 58, 92, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(15, 39, 68, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(247, 147, 30, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(247, 147, 30, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(6, 13, 22, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.875rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        .logo-mark {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
+        }
+
+        .logo-mark .material-symbols-outlined {
+            font-size: 24px;
+            color: var(--tb-blue-dark);
+            font-variation-settings: 'FILL' 1, 'wght' 600;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.7rem;
+            color: var(--tb-orange);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .nav-links a .material-symbols-outlined {
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: var(--tb-orange);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            color: var(--tb-blue-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(247, 147, 30, 0.25);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(247, 147, 30, 0.4);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7rem 2rem 4rem;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.625rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            padding: 0.625rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--tb-orange);
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .hero-badge .material-symbols-outlined {
+            font-size: 18px;
+            animation: pulse-icon 2s infinite;
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5.5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+            animation: fadeInUp 0.7s ease 0.1s both;
+        }
+
+        .hero h1 .text-gradient {
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-light) 50%, var(--tb-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.375rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+            animation: fadeInUp 0.7s ease 0.2s both;
+        }
+
+        .hero-date {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tb-orange);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.7s ease 0.3s both;
+        }
+
+        .hero-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.7s ease 0.4s both;
+        }
+
+        .hero-location .material-symbols-outlined {
+            color: var(--tb-orange);
+            font-size: 20px;
+        }
+
+        /* Countdown */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.7s ease 0.5s both;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-value {
+            width: 72px;
+            height: 72px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--tb-orange);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .countdown-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.7s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 1.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            color: var(--tb-blue-dark);
+            box-shadow: 0 4px 20px rgba(247, 147, 30, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(247, 147, 30, 0.45);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--border-accent);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--tb-orange);
+            background: rgba(247, 147, 30, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sections */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tb-orange);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-label .material-symbols-outlined {
+            font-size: 18px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Cards */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(247, 147, 30, 0.15) 0%, rgba(247, 147, 30, 0.05) 100%);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-icon .material-symbols-outlined {
+            font-size: 28px;
+            color: var(--tb-orange);
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .about-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.625rem;
+            font-weight: 600;
+        }
+
+        .about-card p {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+        }
+
+        /* Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--tb-orange), var(--tb-orange-light));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+        }
+
+        .category-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(247, 147, 30, 0.12) 0%, rgba(247, 147, 30, 0.04) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+
+        .category-icon .material-symbols-outlined {
+            font-size: 30px;
+            color: var(--tb-orange);
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .category-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .category-card p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-marker {
+            min-width: 48px;
+            height: 48px;
+            background: var(--bg-card);
+            border: 2px solid var(--tb-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-marker .material-symbols-outlined {
+            font-size: 22px;
+            color: var(--tb-orange);
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .timeline-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--tb-orange);
+            font-weight: 500;
+            margin-bottom: 0.375rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .timeline-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(247, 147, 30, 0.12);
+            color: var(--tb-orange);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.625rem;
+        }
+
+        /* Prizes */
+        .prizes-card {
+            text-align: center;
+            padding: 3.5rem;
+            background: var(--bg-card);
+            border: 2px dashed var(--border-accent);
+            border-radius: 20px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .prizes-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(247, 147, 30, 0.15) 0%, rgba(247, 147, 30, 0.05) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .prizes-icon .material-symbols-outlined {
+            font-size: 40px;
+            color: var(--tb-orange);
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .prizes-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prizes-card p {
+            color: var(--text-muted);
+        }
+
+        /* Judging Criteria */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .criteria-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .criteria-item:hover {
+            border-color: var(--border-accent);
+        }
+
+        .criteria-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--tb-orange);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .criteria-item h4 {
+            font-size: 0.95rem;
+            margin-top: 0.375rem;
+            font-weight: 600;
+        }
+
+        /* Requirements */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .requirement-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .requirement-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .requirement-header .material-symbols-outlined {
+            font-size: 24px;
+            color: var(--tb-orange);
+        }
+
+        .requirement-header h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .requirement-list {
+            list-style: none;
+        }
+
+        .requirement-list li {
+            padding: 0.625rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            font-size: 0.925rem;
+        }
+
+        .requirement-list li:last-child {
+            border-bottom: none;
+        }
+
+        .requirement-list .material-symbols-outlined {
+            font-size: 18px;
+            color: var(--tb-orange);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            margin-bottom: 0.875rem;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .faq-item:hover,
+        .faq-item.active {
+            border-color: var(--border-accent);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--tb-orange);
+        }
+
+        .faq-question .material-symbols-outlined {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+            color: var(--tb-orange);
+        }
+
+        .faq-item.active .faq-question .material-symbols-outlined {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(247, 147, 30, 0.03) 100%);
+        }
+
+        .cta-section h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            background: rgba(6, 13, 22, 0.95);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2.5rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo .material-symbols-outlined {
+            font-size: 20px;
+            color: var(--tb-blue-dark);
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .footer-info {
+            line-height: 1.4;
+        }
+
+        .footer-info strong {
+            font-weight: 600;
+        }
+
+        .footer-tagline {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--tb-orange);
+        }
+
+        .footer-links .material-symbols-outlined {
+            font-size: 18px;
+        }
+
+        .footer-copy {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-date {
+                font-size: 1.25rem;
+            }
+
+            .countdown {
+                gap: 0.625rem;
+            }
+
+            .countdown-value {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="grid-pattern"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Techno Brain</span>
+                    <span class="logo-tagline">Empowering Lives</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about"><span class="material-symbols-outlined">info</span> About</a></li>
+                <li><a href="#categories"><span class="material-symbols-outlined">category</span> Categories</a></li>
+                <li><a href="#timeline"><span class="material-symbols-outlined">schedule</span> Timeline</a></li>
+                <li><a href="#prizes"><span class="material-symbols-outlined">emoji_events</span> Prizes</a></li>
+                <li><a href="rules/">Rules</a></li>
+                <li><a href="submission/">Submission</a></li>
+            </ul>
+            <a href="http://bit.ly/47QrKAo" target="_blank" class="nav-cta">
+                <span class="material-symbols-outlined">how_to_reg</span>
+                Register
+            </a>
+            <button class="mobile-menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="material-symbols-outlined">event</span>
+                <span>December 2025 • Nairobi, Kenya</span>
+            </div>
+            <h1>AI-Driven <span class="text-gradient">Smart Finance</span> Hackathon</h1>
+            <p class="hero-subtitle">From Transaction to Trust</p>
+            <p class="hero-date">13th December 2025</p>
+            <div class="hero-location">
+                <span class="material-symbols-outlined">location_on</span>
+                <span>Nairobi, Kenya</span>
+            </div>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Mins</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Secs</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="http://bit.ly/47QrKAo" target="_blank" class="btn btn-primary">
+                    <span class="material-symbols-outlined">app_registration</span>
+                    Register Now
+                </a>
+                <a href="submission/" class="btn btn-secondary">
+                    <span class="material-symbols-outlined">upload_file</span>
+                    Submission Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">rocket_launch</span>
+                    About the Hackathon
+                </div>
+                <h2>Build, Innovate, Transform</h2>
+                <p>Join innovators, disruptors, and problem-solvers ready to reshape the future of secure, intelligent finance.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <span class="material-symbols-outlined">emoji_events</span>
+                    </div>
+                    <h3>Compete for Prizes</h3>
+                    <p>Exciting prizes await the most innovative solutions. Build AI-powered financial solutions that make a real difference.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h3>Network & Collaborate</h3>
+                    <p>Connect with like-minded innovators, industry experts, and potential collaborators in the fintech and AI space.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <span class="material-symbols-outlined">school</span>
+                    </div>
+                    <h3>Learn from Experts</h3>
+                    <p>Gain insights from industry leaders and mentors who are shaping the future of AI in financial services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">category</span>
+                    Challenge Areas
+                </div>
+                <h2>Choose Your Track</h2>
+                <p>Select a challenge area and build innovative solutions that push the boundaries of smart finance.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">shield</span>
+                    </div>
+                    <h3>Threat Detection</h3>
+                    <p>Build AI systems to detect and prevent financial threats in real-time</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">security</span>
+                    </div>
+                    <h3>Cyber Intelligence</h3>
+                    <p>Develop intelligent solutions for financial cybersecurity</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">policy</span>
+                    </div>
+                    <h3>Organized Crime</h3>
+                    <p>Create tools to detect and prevent financial crimes and fraud</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+                    <h3>Generative & Agentic AI</h3>
+                    <p>Leverage GenAI and autonomous agents for financial services</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">gavel</span>
+                    </div>
+                    <h3>Governance & Public Policy</h3>
+                    <p>Build solutions for regulatory compliance and policy enforcement</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">analytics</span>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Develop AI-powered financial forecasting and analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    Key Dates
+                </div>
+                <h2>Timeline</h2>
+                <p>Mark your calendar and don't miss these important milestones.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="material-symbols-outlined">how_to_reg</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Now – December 1, 2025</div>
+                        <h3>Registration Open</h3>
+                        <p>Register your team and secure your spot. Limited slots available!</p>
+                        <span class="timeline-tag">
+                            <span class="material-symbols-outlined" style="font-size: 14px;">circle</span>
+                            Closes Dec 1
+                        </span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="material-symbols-outlined">upload_file</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2 – 8, 2025</div>
+                        <h3>Project Submission</h3>
+                        <p>Submit your project including code repository, demo video, and documentation.</p>
+                        <span class="timeline-tag">
+                            <span class="material-symbols-outlined" style="font-size: 14px;">timer</span>
+                            7 Days
+                        </span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="material-symbols-outlined">celebration</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 13, 2025</div>
+                        <h3>Hackathon Day</h3>
+                        <p>Present your solutions, network with peers, and compete for exciting prizes!</p>
+                        <span class="timeline-tag">
+                            <span class="material-symbols-outlined" style="font-size: 14px;">star</span>
+                            Main Event
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section id="prizes">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">emoji_events</span>
+                    Rewards
+                </div>
+                <h2>Prizes & Categories</h2>
+                <p>Amazing prizes await the most innovative solutions.</p>
+            </div>
+            <div class="prizes-card">
+                <div class="prizes-icon">
+                    <span class="material-symbols-outlined">redeem</span>
+                </div>
+                <h3>Stay Tuned!</h3>
+                <p>Exciting prizes to be announced soon. Secure your spot now to be part of the innovation!</p>
+            </div>
+
+            <div class="criteria-grid">
+                <div class="criteria-item">
+                    <div class="criteria-value">20%</div>
+                    <h4>Innovation</h4>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-value">20%</div>
+                    <h4>Impact</h4>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-value">20%</div>
+                    <h4>Usability</h4>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-value">20%</div>
+                    <h4>Quality</h4>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-value">20%</div>
+                    <h4>Alignment</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">checklist</span>
+                    What You Need
+                </div>
+                <h2>Submission Requirements</h2>
+                <p>Make sure your submission meets all the requirements to be eligible.</p>
+            </div>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-header">
+                        <span class="material-symbols-outlined">videocam</span>
+                        <h3>Video Requirements</h3>
+                    </div>
+                    <ul class="requirement-list">
+                        <li><span class="material-symbols-outlined">check_circle</span> Maximum 5 minutes in length</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Demonstrate your solution in action</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Describe your building experience</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Explain why you chose this solution</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Answer: "How did AI help build this?"</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-header">
+                        <span class="material-symbols-outlined">code</span>
+                        <h3>Technical Requirements</h3>
+                    </div>
+                    <ul class="requirement-list">
+                        <li><span class="material-symbols-outlined">check_circle</span> Original work created for this hackathon</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> GitHub repository with documentation</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Working demo or deployed endpoint</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Architecture diagram (if applicable)</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Follow security best practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="material-symbols-outlined">help</span>
+                    FAQ
+                </div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Who can participate in the hackathon?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The hackathon is open to all developers, data scientists, designers, and innovators aged 18 and above. Teams can have up to 4 members, and each participant can only be part of one team.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is there a registration fee?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No, participation is completely free! Register now to secure your spot as slots are limited. Registration closes December 1st, 2025.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I participate individually or do I need a team?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You can participate as an individual or as part of a team (up to 4 members). We encourage team participation for diverse skill sets, but solo hackers are welcome!
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What should I submit?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Your submission should include: a GitHub repository with your code and documentation, a demo video (max 5 minutes), and optionally a deployed endpoint. Submissions are made via GitHub Issues. See the submission page for complete details.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When and where is the hackathon?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The main hackathon event is on December 13th, 2025 in Nairobi, Kenya. Registration closes December 1st. Project submissions are accepted December 2-8, 2025. Specific venue details will be shared with registered participants.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to <span style="color: var(--tb-orange);">Transform Finance</span>?</h2>
+        <p>Register now and be part of the innovation. Registration closes December 1st!</p>
+        <a href="http://bit.ly/47QrKAo" target="_blank" class="btn btn-primary">
+            <span class="material-symbols-outlined">rocket_launch</span>
+            Register Now — It's Free!
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+                <div class="footer-info">
+                    <strong>Techno Brain</strong>
+                    <p class="footer-tagline">Empowering Lives</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="rules/"><span class="material-symbols-outlined">gavel</span> Rules</a>
+                <a href="submission/"><span class="material-symbols-outlined">upload_file</span> Submission</a>
+                <a href="#faq"><span class="material-symbols-outlined">help</span> FAQ</a>
+                <a href="mailto:hackathon@technobrain.com"><span class="material-symbols-outlined">mail</span> Contact</a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2025 Techno Brain Group. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('December 13, 2025 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p style="color: var(--tb-orange); font-size: 1.25rem; font-weight: 600;">🎉 The event has started!</p>';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

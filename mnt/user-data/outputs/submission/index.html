@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission | AI-Driven Smart Finance Hackathon 2025</title>
+    <meta name="description" content="Submit your project for Techno Brain's AI-Driven Smart Finance Hackathon 2025.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        :root {
+            --tb-blue-dark: #0a1628;
+            --tb-blue-primary: #0f2744;
+            --tb-blue-secondary: #1a3a5c;
+            --tb-orange: #f7931e;
+            --tb-orange-light: #ffa940;
+            --tb-orange-dark: #e07800;
+            --text-white: #ffffff;
+            --text-light: #e8eef4;
+            --text-muted: #8fa3b8;
+            --bg-dark: #060d16;
+            --bg-card: rgba(15, 39, 68, 0.6);
+            --border-subtle: rgba(247, 147, 30, 0.2);
+            --border-accent: rgba(247, 147, 30, 0.4);
+            --success-green: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 0%, rgba(247, 147, 30, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(26, 58, 92, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(6, 13, 22, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.875rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        .logo-mark {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
+        }
+
+        .logo-mark .material-symbols-outlined {
+            font-size: 24px;
+            color: var(--tb-blue-dark);
+            font-variation-settings: 'FILL' 1, 'wght' 600;
+        }
+
+        .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+        .logo-name { font-weight: 700; font-size: 1.1rem; }
+        .logo-tagline { font-size: 0.7rem; color: var(--tb-orange); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--tb-orange); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            color: var(--tb-blue-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-header {
+            position: relative;
+            z-index: 1;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+
+        .breadcrumb a { color: var(--tb-orange); text-decoration: none; display: flex; align-items: center; gap: 0.25rem; }
+        .breadcrumb span { color: var(--text-muted); }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .page-header h1 .material-symbols-outlined {
+            font-size: 36px;
+            color: var(--tb-orange);
+        }
+
+        .page-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--success-green);
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-top: 1.25rem;
+        }
+
+        .status-badge .material-symbols-outlined {
+            font-size: 18px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .submission-steps { display: grid; gap: 1.5rem; margin-bottom: 3rem; }
+
+        .step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-2px);
+        }
+
+        .step-number {
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, rgba(247, 147, 30, 0.15) 0%, rgba(247, 147, 30, 0.05) 100%);
+            border: 2px solid var(--tb-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--tb-orange);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .step-content h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.625rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-content h3 .material-symbols-outlined {
+            font-size: 22px;
+            color: var(--tb-orange);
+        }
+
+        .step-content p { color: var(--text-muted); margin-bottom: 0.875rem; }
+
+        .step-content ul { list-style: none; margin: 0.875rem 0; }
+        .step-content li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.625rem;
+            font-size: 0.925rem;
+        }
+
+        .step-content li .material-symbols-outlined {
+            font-size: 18px;
+            color: var(--tb-orange);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, var(--tb-orange) 0%, var(--tb-orange-dark) 100%);
+            color: var(--tb-blue-dark);
+            box-shadow: 0 4px 15px rgba(247, 147, 30, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(247, 147, 30, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--border-accent);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--tb-orange);
+            background: rgba(247, 147, 30, 0.1);
+            box-shadow: none;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            color: var(--text-light);
+        }
+
+        .code-block code { color: var(--tb-orange); }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.75rem;
+            margin: 1.25rem 0;
+        }
+
+        .category-tag {
+            background: rgba(247, 147, 30, 0.08);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 0.625rem 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .category-tag .material-symbols-outlined {
+            font-size: 18px;
+            color: var(--tb-orange);
+        }
+
+        .info-box {
+            background: rgba(247, 147, 30, 0.08);
+            border-left: 4px solid var(--tb-orange);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box h4 {
+            color: var(--tb-orange);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .info-box h4 .material-symbols-outlined { font-size: 20px; }
+        .info-box p, .info-box ul { color: var(--text-muted); margin: 0; font-size: 0.925rem; }
+
+        .checklist {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin: 2rem 0;
+        }
+
+        .checklist h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist h3 .material-symbols-outlined {
+            font-size: 22px;
+            color: var(--tb-orange);
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.625rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .checklist-item .material-symbols-outlined {
+            font-size: 20px;
+            color: var(--success-green);
+        }
+
+        .cta-card {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 16px;
+            margin-top: 2rem;
+        }
+
+        .cta-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-card p { color: var(--text-muted); margin-bottom: 1.5rem; }
+
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            background: rgba(6, 13, 22, 0.95);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a { color: var(--tb-orange); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .page-header h1 { font-size: 1.75rem; }
+            .step { grid-template-columns: 1fr; }
+            .step-number { width: 48px; height: 48px; font-size: 1.1rem; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">
+                <div class="logo-mark">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Techno Brain</span>
+                    <span class="logo-tagline">Empowering Lives</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#categories">Categories</a></li>
+                <li><a href="../#timeline">Timeline</a></li>
+                <li><a href="../rules/">Rules</a></li>
+                <li><a href="./" class="active">Submission</a></li>
+            </ul>
+            <a href="http://bit.ly/47QrKAo" target="_blank" class="nav-cta">
+                <span class="material-symbols-outlined">how_to_reg</span>
+                Register
+            </a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="breadcrumb">
+            <a href="../"><span class="material-symbols-outlined" style="font-size: 18px;">home</span> Home</a>
+            <span>/</span>
+            <span>Submission</span>
+        </div>
+        <h1><span class="material-symbols-outlined">rocket_launch</span> Project Submission</h1>
+        <p>Follow these steps to submit your hackathon project via GitHub Issues</p>
+        <div class="status-badge">
+            <span class="material-symbols-outlined">schedule</span>
+            Submissions Open: December 2–8, 2025
+        </div>
+    </header>
+
+    <main>
+        <div class="submission-steps">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3><span class="material-symbols-outlined">how_to_reg</span> Register Your Team</h3>
+                    <p>First, make sure your team is registered for the hackathon. Each team member must complete the registration form individually before December 1st.</p>
+                    <a href="http://bit.ly/47QrKAo" target="_blank" class="btn">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        Register Here
+                    </a>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3><span class="material-symbols-outlined">folder_code</span> Prepare Your Repository</h3>
+                    <p>Create a public GitHub repository for your project with the following:</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">code</span> Complete source code with clear organization</li>
+                        <li><span class="material-symbols-outlined">description</span> Detailed README.md with project description</li>
+                        <li><span class="material-symbols-outlined">install_desktop</span> Setup and installation instructions</li>
+                        <li><span class="material-symbols-outlined">schema</span> Architecture diagram (if applicable)</li>
+                        <li><span class="material-symbols-outlined">license</span> License file (MIT recommended)</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <h4><span class="material-symbols-outlined">security</span> Security Best Practices</h4>
+                        <p>Never commit API keys, passwords, or sensitive data. Use environment variables and include a .env.example file.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3><span class="material-symbols-outlined">videocam</span> Create Your Demo Video</h3>
+                    <p>Record a demo video (maximum 5 minutes) that includes:</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">play_circle</span> A live demonstration of your solution</li>
+                        <li><span class="material-symbols-outlined">lightbulb</span> Explanation of the problem you're solving</li>
+                        <li><span class="material-symbols-outlined">construction</span> Description of your building experience</li>
+                        <li><span class="material-symbols-outlined">question_mark</span> Why you chose this approach</li>
+                        <li><span class="material-symbols-outlined">smart_toy</span> How AI helped you build this solution</li>
+                    </ul>
+                    <p style="margin-top: 0.875rem;">Upload your video to YouTube (unlisted or public) or a similar platform.</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3><span class="material-symbols-outlined">category</span> Choose Your Category</h3>
+                    <p>Select the category that best fits your project:</p>
+                    <div class="categories-grid">
+                        <div class="category-tag"><span class="material-symbols-outlined">shield</span> Threat Detection</div>
+                        <div class="category-tag"><span class="material-symbols-outlined">security</span> Cyber Intelligence</div>
+                        <div class="category-tag"><span class="material-symbols-outlined">policy</span> Organized Crime</div>
+                        <div class="category-tag"><span class="material-symbols-outlined">smart_toy</span> Generative & Agentic AI</div>
+                        <div class="category-tag"><span class="material-symbols-outlined">gavel</span> Governance & Public Policy</div>
+                        <div class="category-tag"><span class="material-symbols-outlined">analytics</span> Predictive Analytics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3><span class="material-symbols-outlined">upload_file</span> Submit via GitHub Issues</h3>
+                    <p>During the submission period (December 2-8), submit your project by creating a new GitHub Issue using our template. Your issue title should follow this format:</p>
+                    
+                    <div class="code-block">
+                        <code>Project: &lt;Your Project Title&gt;, &lt;Category&gt;</code>
+                    </div>
+
+                    <p>The submission form will ask for:</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">badge</span> <strong>Project Name:</strong> Short identifier for your project</li>
+                        <li><span class="material-symbols-outlined">article</span> <strong>Description:</strong> Detailed description (treat as your README)</li>
+                        <li><span class="material-symbols-outlined">category</span> <strong>Category:</strong> Your chosen challenge category</li>
+                        <li><span class="material-symbols-outlined">link</span> <strong>Repository URL:</strong> Link to your GitHub repository</li>
+                        <li><span class="material-symbols-outlined">public</span> <strong>Deployed Endpoint:</strong> (Optional) Live demo URL</li>
+                        <li><span class="material-symbols-outlined">movie</span> <strong>Video URL:</strong> Link to your demo video</li>
+                        <li><span class="material-symbols-outlined">group</span> <strong>Team Members:</strong> GitHub usernames of all team members</li>
+                    </ul>
+
+                    <div class="info-box" style="margin-top: 1.25rem;">
+                        <h4><span class="material-symbols-outlined">info</span> Important</h4>
+                        <p>Confirm that all team members have individually completed the registration form. We cannot award prizes if team members aren't registered!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checklist">
+            <h3><span class="material-symbols-outlined">checklist</span> Submission Checklist</h3>
+            <div class="checklist-grid">
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> All team members registered</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> GitHub repository is public</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> README.md is complete</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> Demo video under 5 minutes</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> Video is accessible</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> No sensitive data in repo</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> Category matches solution</div>
+                <div class="checklist-item"><span class="material-symbols-outlined">check_circle</span> Issue title format correct</div>
+            </div>
+        </div>
+
+        <div class="cta-card">
+            <h2>Ready to Submit?</h2>
+            <p>Submissions open December 2, 2025. Make sure you're registered before December 1st!</p>
+            <div class="cta-buttons">
+                <a href="http://bit.ly/47QrKAo" target="_blank" class="btn">
+                    <span class="material-symbols-outlined">how_to_reg</span>
+                    Register Your Team
+                </a>
+                <a href="../rules/" class="btn btn-secondary">
+                    <span class="material-symbols-outlined">gavel</span>
+                    View Rules
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Techno Brain Group. <a href="../">Back to Hackathon Home</a> | <a href="../rules/">View Rules</a></p>
+    </footer>
+</body>
+</html>
