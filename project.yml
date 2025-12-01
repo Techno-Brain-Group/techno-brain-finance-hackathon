@@ -31,11 +31,7 @@ body:
         - label: JavaScript/TypeScript
           required: false 
           required: false
-        - label: Microsoft Copilot Studio
-          required: false 
-        - label: Microsoft 365 Agents SDK
-          required: false 
-        - label: Azure AI Agent Service
+        - label: Other
           required: false 
   - type: input
     id: url_repo
